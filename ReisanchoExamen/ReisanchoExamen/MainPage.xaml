@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReisanchoExamen.MainPage">
+
+    <StackLayout>
+        <Label x:Name="lblUser" FontSize="Title" Padding="30,10,30,10"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Text="Ingrese Nombre" Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="txtNombre" Keyboard="Text" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Monto Inicial" Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="txtMonto" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Pago Mensual" Grid.Row="2" Grid.Column="0" />
+            <Entry x:Name="txtPago" IsReadOnly="True" Grid.Row="2" Grid.Column="1" />
+            <Button x:Name="btnCalcular" Clicked="btnCalcular_Clicked" Grid.Row="2" Grid.Column="2" Text="Calcular" />
+
+        </Grid>
+        <Button x:Name="btnSave" Clicked="btnSave_Clicked" Text="Guardar"  />
+    </StackLayout>
+
+</ContentPage>
